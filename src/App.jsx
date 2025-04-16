@@ -5,12 +5,9 @@ import Todosection from './Component/Todosection'
 import Addtaskmodal from './Component/Addtaskmodal'
 function App() {
   const initial =JSON.parse(localStorage.getItem("todos"))||[]
-  
+
   const [list,setList]=useState(initial);
   const [isclick, setIsclick] = useState(false);
-  // const [inputval, setInp] = useState("");
-  // const [des, setDes] = useState("");
-
   function handle() {
     setIsclick(!isclick);
   }
@@ -19,8 +16,6 @@ function App() {
   }
   return (
     <div>
-      <Navbar />
-      {/* <Carousel /> */}
         <Todosection handleclick={handle} todos={list} setList=
         {setList} />
   

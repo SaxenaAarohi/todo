@@ -26,7 +26,7 @@ const Addtaskmodal = ({ setIsclick, closemodal, setList }) => {
   }
 
   return (
-    <div className=' fixed flex justify-center items-center fixed top-0 bg-black/50 left-0 w-full h-full backdrop-blur-sm'>
+    <div className=' fixed flex justify-center items-center  top-0 bg-black/50 left-0 w-full h-full backdrop-blur-sm'>
       <div className='relative h-[300px] w-[300px] bg-red-200'>
         <button className='absolute -top-3 -right-2' onClick={closemodal}>X</button>
         <input type='text' className='h-8 m-6 w-[80%]' onChange={handleinp}></input>
