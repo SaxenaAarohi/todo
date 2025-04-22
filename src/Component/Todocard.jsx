@@ -39,14 +39,14 @@ const Todocard = ({ todo, setList, islist }) => {
   }, [inp, des]);
 
   return (
-    <div className={`w-[320px] bg-gradient-to-br from-pink-400 to-red-400 text-white rounded-2xl shadow-xl p-5 flex flex-col gap-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:-translate-y-1 ${islist ? 'h-[120px]' : 'h-[200px]'}`}>
+    <div className={`w-[320px] bg-gradient-to-br from-pink-400 to-red-400 text-white rounded-2xl shadow-xl p-5 flex flex-col gap-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:-translate-y-1 ${islist ? 'h-[150px]' : 'h-[200px]'}`}>
       <div className="flex items-center justify-between">
         <input 
           type="text" 
           value={inp} 
           onChange={(e) => setInp(e.target.value)} 
           className="bg-transparent text-lg font-semibold w-full mr-4 outline-none placeholder-white  transition"
-          placeholder="Title"
+          placeholder="Untitled"
         />
         <button onClick={togglefun} className="hover:scale-110 transition-transform">
           {todo.isCompleted ? (
@@ -60,12 +60,12 @@ const Todocard = ({ todo, setList, islist }) => {
   <textarea
     value={des}
     onChange={(e) => setDes(e.target.value)}
-    placeholder="Description"
+  
     rows={4}
     className="w-full bg-transparent outline-none resize-none text-sm placeholder-white leading-snug h-[100px] pr-2 whitespace-pre-wrap break-words text-ellipsis overflow-hidden"
     style={{
       display: '-webkit-box',
-      WebkitLineClamp: 4,
+      WebkitLineClamp: islist?1:4,
       WebkitBoxOrient: 'vertical',
       overflow: 'hidden'
     }}
